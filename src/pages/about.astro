@@ -1,9 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = 'About';
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
-<Layout title="About">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -36,33 +47,24 @@ import Card from '../components/Card.astro';
         <a href="/first-astro-project/">Home</a>
         <a href="/first-astro-project/about/">About</a>
 		<a href="/first-astro-project/blog/">Blog</a>
-		<h1><span class="text-gradient">About</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+		<h1><span class="text-gradient">{pageTitle}</span></h1>
+
+		<p>Here are a few facts about me:</p>
+		<ul>
+		  <li>My name is {identity.firstName}.</li>
+		  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+		  {identity.hobbies.length >= 2 &&
+			<li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+		  }
 		</ul>
+		<p>My skills are:</p>
+		<ul>
+		  {skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+
+		{happy && <p>I am happy to be learning Astro!</p>}
+		{finished && <p>I finished this tutorial!</p>}
+		{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 	</main>
 </Layout>
 
