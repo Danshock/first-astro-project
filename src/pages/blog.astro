@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css'
 const pageTitle = 'Blog';
 ---
@@ -35,15 +37,14 @@ const pageTitle = 'Blog';
 				</linearGradient>
 			</defs>
 		</svg>
-        <a href="/first-astro-project/">Home</a>
-        <a href="/first-astro-project/about/">About</a>
-		<a href="/first-astro-project/blog/">Blog</a>
+		<Navigation />
 		<h1><span class="text-gradient">{pageTitle}</span></h1>
-        <ul>
-          <li><a href="/first-astro-project/posts/post-1/">Post 1</a></li>
-          <li><a href="/first-astro-project/posts/post-2/">Post 2</a></li>
-          <li><a href="/first-astro-project/posts/post-3/">Post 3</a></li>
-        </ul>
+      <ul>
+        <li><a href="/first-astro-project/posts/post-1/">Post 1</a></li>
+        <li><a href="/first-astro-project/posts/post-2/">Post 2</a></li>
+        <li><a href="/first-astro-project/posts/post-3/">Post 3</a></li>
+      </ul>
+		<Footer />
 	</main>
 </Layout>
 
