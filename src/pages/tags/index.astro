@@ -1,0 +1,6 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const pageTitle = "Tags";
+const allPosts = await Astro.glob('../posts/*.md');
+---
+<BaseLayout pageTitle={pageTitle}></BaseLayout>
