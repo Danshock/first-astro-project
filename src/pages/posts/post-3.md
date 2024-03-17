@@ -9,5 +9,3 @@ image:
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning astro"]
 ---
-# My Third Blog Post
-Third post!
