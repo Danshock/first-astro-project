@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://Danshock.github.io',
+    site: 'https://danshock.github.io/first-astro-project/',
     base: '/first-astro-project'
 });
