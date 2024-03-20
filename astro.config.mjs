@@ -1,7 +1,10 @@
 import { defineConfig } from 'astro/config';
 
+import preact from "@astrojs/preact";
+
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://danshock.github.io/first-astro-project/',
-    base: '/first-astro-project'
+  site: 'https://danshock.github.io/first-astro-project/',
+  base: '/first-astro-project',
+  integrations: [preact()]
 });
