@@ -5,11 +5,10 @@ import Footer from '../components/Footer.astro';
 import '../styles/global.css'
 const { pageTitle } = Astro.props;
 ---
-
 <Layout title={pageTitle}>
 	<main>
 		<Header />
-        <h1><span class="text-gradient">{pageTitle}</span></h1>
+        <h1 transition:animate="slide"><span class="text-gradient">{pageTitle}</span></h1>
         <slot />
 		<Footer />
 		<script>
